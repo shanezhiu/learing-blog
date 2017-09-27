@@ -1,0 +1,1 @@
+update new_ys_category as c left join (select cat_id,group_concat(id) as ids from new_ys_article group by cat_id) as i on c.id=i.cat_id set c.aids=i.ids;
