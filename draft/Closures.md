@@ -31,6 +31,12 @@ Nested Function 可以使用在他们外部声明的变量。
 
 在上面这个例子中：```makeFunc()```中的```displayName()```函数在函数里面被返回出来了(请注意，在```JavaScript```中一切都是对象，所以```displayName()```也是一个对象，即```return displayName```返回的是个对象)
 
+> 一般来说，函数内部局部变量的lifecycle是在该函数执行的时期才存在的，一旦函数执行完毕，是获取不到局部变量的。然而，跟其 他语言不一样的是：在displayName函数执行前，它以对象的方式被返回出来了。
+> The reason is that functions in JavaScript form closures.
+> 原因就是在Javascript中函数会形成闭包。
+> 闭包就是函数以及其声明的地方内部的词法环境(context的解释)
+> lexical environment 是由在闭包创建的时候在该范围内的变量组成。(上下文--指的是上文与下文)
+
 
 ### 2. 闭包的应用
 
@@ -49,5 +55,7 @@ Nested Function 可以使用在他们外部声明的变量。
 2. [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures "Closures")
 3. [IIFE](http://benalman.com/news/2010/11/immediately-invoked-function-expression/ "IIFE")
 4. [IIFE-Wiki][2]
+5. [context][3]
 [1]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 [2]:https://en.wikipedia.org/wiki/Immediately-invoked_function_expression
+[3]:https://en.wikipedia.org/wiki/Context_(computing)
