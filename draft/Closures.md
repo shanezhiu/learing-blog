@@ -6,10 +6,12 @@
 >A closure is the combination of a function and the lexical environment within which that function was declared.                                
                                                                 --FROM [MDN][1]
 
+闭包-是由函数以及该函数声明的词法环境构成(我更喜欢成为上下文)组成。
+
 
 ### 参考资料
-1. ['How do JavaScript closures work?']("https://stackoverflow.com/questions/111102/how-do-javascript-closures-work/111111#111111" "How do JavaScript closures work?")
-2. ["Closures"]("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures" "Closures")
-3. [IIFE]("http://benalman.com/news/2010/11/immediately-invoked-function-expression/" "IIFE")
+1. [How do JavaScript closures work?](https://stackoverflow.com/questions/111102/how-do-javascript-closures-work/111111#111111 "How do JavaScript closures work?")
+2. [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures "Closures")
+3. [IIFE](http://benalman.com/news/2010/11/immediately-invoked-function-expression/ "IIFE")
 
 [1]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
