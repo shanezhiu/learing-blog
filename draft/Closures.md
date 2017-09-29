@@ -8,6 +8,12 @@
 
 闭包-是由函数以及该函数声明的词法环境构成(我更喜欢成为上下文)组成。
 
+local variable : 局部变量(称之为本地变量更好一些，会有使用范围)
+global variable : 全局变量
+lexical scoping : 被描述成解析器在存在嵌套函数的情况的时候，如何解析变量。
+lexical 指的是
+
+
 
 ### 参考资料
 1. [How do JavaScript closures work?](https://stackoverflow.com/questions/111102/how-do-javascript-closures-work/111111#111111 "How do JavaScript closures work?")
