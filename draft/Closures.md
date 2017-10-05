@@ -14,6 +14,9 @@ lexical scoping : 被描述成解析器在存在嵌套函数的情况的时候�
 lexical 指的是
 
 
+明日认为
+
+
 
 ### 参考资料
 1. [How do JavaScript closures work?](https://stackoverflow.com/questions/111102/how-do-javascript-closures-work/111111#111111 "How do JavaScript closures work?")
