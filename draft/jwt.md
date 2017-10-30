@@ -22,6 +22,11 @@ Message Autherticateion Code (MAC):
 Plaintext:
 
 
+JWT可以做两件事情：
+1. Authentication(认证):
+2. Information Exchange(信息交换):
+
+
 ## 参考资料
 
 1. [JWS](https://tools.ietf.org/html/rfc7515 "JSON Web Signature")
@@ -33,6 +38,8 @@ Plaintext:
 7. [Internet Security Glossary](https://tools.ietf.org/html/rfc4949 "Internet Security Glossary")
 8. [A Universally Unique IDentifier (UUID) URN Namespace](https://tools.ietf.org/html/rfc4122 "A Universally Unique IDentifier (UUID) URN Namespace")
 9. [JWT理性思考](http://zhuanlan.51cto.com/art/201708/548195.htm "JWT理性思考")
+10. [Spring Security(三) -- JWT验证原理(上)](https://zhuanlan.zhihu.com/p/27722251 "JWT验证原理(上)")
+11. [数字签名是什么](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html "数字签名的作用")
 
 
 
