@@ -13,3 +13,7 @@ when I am learning alone,I consider that I should take notes for these knowledge
 + [phpunit](https://phpunit.de "phpunit")
 + [mockery](http://docs.mockery.io/en/latest/ "mockery")
 + [awesome-php-](https://github.com/shanezhiu/awesome-php-1 "awesome-php")
+
+## worklist:
+
+1. 一个月之后，我觉得我自己需要做一些有效的贡献，整理笔记，完善自己的框架测试
