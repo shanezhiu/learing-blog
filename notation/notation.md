@@ -26,6 +26,7 @@ double quote ("")
 
 slash (/)
 
+dash (-)
 
 backslash (\\)
 
