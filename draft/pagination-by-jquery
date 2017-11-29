@@ -15,6 +15,37 @@ p 2
 div class l fl 3
 div class r fr 3
 
+
+u * 120 * n条记录
+
+不能有重复
+
+ <div class="page-num">
+                    <li class="page-item active">
+                        <a class="page-link" href="">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="">4</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="">...22</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="">下一页</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="">末页</a>
+                    </li>
+                </div>
+
+
+
  <div class="page-num">
                     <li class="page-item">
                         <a class="page-link" href="">首页</a>
@@ -58,3 +89,4 @@ a class page-link 3
 
 first prev  next    last  
  
+
