@@ -17,3 +17,12 @@ when I am learning alone,I consider that I should take notes for these knowledge
 ## worklist:
 
 1. 一个月之后，我觉得我自己需要做一些有效的贡献，整理笔记，完善自己的框架测试
+
+
+## 2018
+
++ C语言 数据结构与算法
++ 计算机网络
++ Linux 
++ 网络编程
++ PHP Javascript
