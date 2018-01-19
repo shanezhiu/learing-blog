@@ -358,4 +358,20 @@ wget http://am1.php.net/distributions/php-7.2.1.tar.bz2
 
 ## 四、参考资料
 
+1. [systemd 入门教程](http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html "systemd入门教程")
+2. [CentOS7.3编译安装MariaDB10.2.6](https://segmentfault.com/a/1190000009909776 "CentOS7.3编译安装MariaDB10.2.6")
+3. [CentOS7.3编译安装php7.1](https://segmentfault.com/a/1190000009909817 "CentOS7.3编译安装php7.1")
+4. [GNU bison](https://zh.wikipedia.org/wiki/GNU_bison "GNU bison")
+5. [GD-support configure PHP](http://php.net/manual/en/image.installation.php "GD-support configure PHP")
+6. [Argon2](https://en.wikipedia.org/wiki/Argon2 "Argon2")
+7. [The Sodium crypto library (libsodium)](https://download.libsodium.org/doc/ "The Sodium crypto library (libsodium)")
+8. [get the mariadb code,buildit,test it](https://mariadb.org/get-involved/getting-started-for-developers/get-code-build-test/ "Get the code, build it, test it")
+9. [Generic Build Instructions](https://mariadb.com/kb/en/library/generic-build-instructions/ "Generic Build Instructions")
+10. [Installing System Tables (mysql_install_db)](https://mariadb.com/kb/en/library/installing-system-tables-mysql_install_db/ "Installing System Tables (mysql_install_db)")
+11. ["Compiling MariaDB From Source"](https://mariadb.com/kb/en/library/compiling-mariadb-from-source/ "Compiling MariaDB From Source")
+12. [ncurses](https://zh.wikipedia.org/zh-hans/Ncurses "ncurses")
+13. [CMake](https://cmake.org/cmake/help/latest/index.html "CMake document")
+14. [php-manul](http://php.net/manual/en/install.unix.nginx.php "Install-php-manual")
+15. [PHP7.2 NEW FEATURE](http://php.net/manual/en/migration72.new-features.php "New features")
+16. [Building nginx from Sources](http://nginx.org/en/docs/configure.html "Building nginx from Sources")
 ## APPEND
