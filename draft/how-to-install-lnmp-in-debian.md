@@ -352,7 +352,22 @@ wget http://am1.php.net/distributions/php-7.2.1.tar.bz2
     --with-pcre-jit \
     --enable-fast-install \
     --disable-fileinfo
+ 配置
+进入源码文件，cp php.ini.development /opt/soft/php-7.2/php.ini
+修改以下部分
+extension_dir=/opt/soft/php-7.2/lib/php/extensions/no-debug-non-zts-20170718/
+extension=mysqli
+time_zone=PRC
 
+PHP-FPM启动脚本(systemd)
+PHP 非常人性化，在源码目录下/sapi/fpm下可以找到php-fpm.service文件，复制到/etc/systemd/system/php-fpm.service中
+systemdctl start php-fpm.service
+systemdctl status php-fpm.service
+如果发生错误，使用journalctl -xn查看具体错误信息
+开启动，sytemctl enable php-fpm.service
+
+同时要添加php-fpm配置文件，安装目录下etc/ 下 cp php-fpm.conf.default php-fpm.conf cp php.conf.d/www.conf.default
+ php.conf.d/www.conf
 
 
 
