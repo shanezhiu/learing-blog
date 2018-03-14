@@ -38,7 +38,7 @@ TODO:变量名的其他限制？
 > 当然，除了声明变量之外，我们可以跟用户交互，使用read函数将输入的字符串赋值给变量，read将从标准输入中读取用户输入的数据。
 
 	echo "Please input your name?"
-	read $MY_NAME
+	read MY_NAME
 	echo "Hello ${MY_NAME} - hope you have a nice day!"
 
 ### 变量作用域
