@@ -71,7 +71,7 @@ TODO:变量名的其他限制？
 
 假如，我们输入shane，该程序会像咱们期待的那样执行吗？最终结果与我们的预期结果会一致吗？即会“I will create you a file called shane_file”,然后在当前目录下生成一个shane_file文件？
 
-并不会，因为后两行代码，解释器并没法识别变量的结束，也没法确定剩余部分的开发。
+并不会，因为后两行代码，解释器并没法识别变量的结束，也没法确定剩余部分的开始。
 
 为了让解析器识别哪部分是变量，我们需要给变量加上一对大括号，即：
 	
@@ -84,7 +84,7 @@ TODO:变量名的其他限制？
 
 注意：
 + 请$符号应该放在花括号外面。
-+ 注意最后一行，如果我输入shane chiu，两个单词中间是有空格的，最后一行touch shane chiu_file,将会创建两个文件，shane,chiu_file,如果只想得到一个文件，请添加双引号 `touch "touch ${$USER_NAME}_file"`
++ 注意最后一行，如果我输入shane chiu，两个单词中间是有空格的，最后一行touch shane chiu_file,将会创建两个文件，shane,chiu_file,如果只想得到一个文件，请添加双引号 `touch "touch ${USER_NAME}_file"`
 
 
 ### 通配符(WildCards)
