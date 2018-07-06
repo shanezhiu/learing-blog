@@ -1,0 +1,6 @@
+					{date}
+已经完成了shell script第一步文档					{date}
+已经完成了vim					 date
+vim事件					Tue Jan 30 13:39:41 CST 2018
+sdfsdf					Tue Jan 30 15:35:33 CST 2018
+sdfs					Tue Jan 30 15:35:59 CST 2018
