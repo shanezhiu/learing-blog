@@ -3,8 +3,8 @@ when I am learning alone,I consider that I should take notes for these knowledge
 
 ## 2018 TODO 列表
 
- C语言 数据结构与算法
-- [ ] python
+ C语言 数据结构与算法 
+- [ ] python 
 - [ ] 计算机网络
 - [ ] Linux系统运维
 - [ ] 网络编程
