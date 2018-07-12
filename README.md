@@ -3,9 +3,9 @@ When I am learning alone, I consider that  doing some notes could be good for ac
 
 ## :muscle: 2018 TODO 列表
 
-- [ ] C语言 数据结构与算法 
-- [ ] docker 学习
-- [ ] PHP 基础
+- :fist: [ ] C语言 数据结构与算法 
+- :fire: [ ] docker 学习
+- :fire: [ ] PHP 基础
     + [ ] PHP基础
     + [ ] composer的理解
     + [ ] PHP设计模式
@@ -18,7 +18,7 @@ When I am learning alone, I consider that  doing some notes could be good for ac
 - [ ] Linux系统运维
 - [ ] 网络编程
 - [ ] 面向对象
-- [ ] 英语
+- :fire: [ ] 英语
 - [ ] 工具使用
     + [ ] docker,vagrant,gitlab,CI/CD
     + [ ] git,git flow, subversion
