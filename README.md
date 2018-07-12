@@ -1,5 +1,5 @@
 # learing-blog
-When I am learning alone,I consider that  doing some notes could be good for acquire these knowledge point and my comprehension  in order to reviewing.
+When I am learning alone, I consider that  doing some notes could be good for acquire these knowledge point and my comprehension  in order to reviewing.
 
 ## 2018 TODO 列表
 
