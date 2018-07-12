@@ -4,14 +4,21 @@ When I am learning alone, I consider that  doing some notes could be good for ac
 ## :muscle: 2018 TODO 列表
 
 - [ ] C语言 数据结构与算法 
+- [ ] docker 学习
+- [ ] PHP 基础
+    + [ ] PHP基础
+    + [ ] composer的理解
+    + [ ] PHP设计模式
+    + [ ] Yii2框架理解
 - [ ] python 
+- [ ] 数据库
+    + [ ] 关系型数据库(mysql, mssql)
+    + [ ] 非关系型数据库(memcached,redis,MongoDB,GraphSQL)
 - [ ] 计算机网络
 - [ ] Linux系统运维
 - [ ] 网络编程
-- [ ] PHP 基础
 - [ ] 面向对象
 - [ ] 英语
-- [ ] docker 学习
 - [ ] 工具使用
     + [ ] docker,vagrant,gitlab,CI/CD
     + [ ] git,git flow, subversion
@@ -19,5 +26,5 @@ When I am learning alone, I consider that  doing some notes could be good for ac
 ## :heavy_check_mark: 七月 TODO 列表
 
 - [ ] C语言 基础
-- [ ] Yii框架
+- [ ] Yii框架guide
 - [ ] 使用docker搭建lnmp/lamp环境
