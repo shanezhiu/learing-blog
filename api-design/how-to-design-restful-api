@@ -1,0 +1,189 @@
+## 要点
+* 使用GET、POST、PATCH、DELETE共4个HTTP Method，而非简单的GET和POST两者。
+* PUT是替换, 实际中不太好用, 更新可以用PATCH操作
+* 版本号放在 url 中, 不放在header中
+* 响应使用HTTP状态码来标志请求的执行结果，而非以往的success字段。
+* URL符合业界普遍接受的REST规则，减少在URL中标识操作类型的情况，如使用POST /users代替POST /users/save
+* 实体名称均以复数形式表示，如GET /users或POST /users/status
+* URL最后不得添加斜杠/符号。
+* 对于GET请求，数据在URL后通过标准的query格式提供，如GET /users?status=1,2&keyword=hello。
+* 每个请求需提供一个`udid`, 放在 url 中，方便跟踪,调试,诊断请求, 放在 url 中的好处是可以直接从`NGINX`日志中查找相应的设备的操作, 比放在 header 里好
+* 获取资源用`GET`
+* 创建资源用`POST`
+* 更新资源用`PATCH`
+* 删除资源用`DELETE`
+* `PATCH`动作, 返回`201`状态码, 能降低前期的开发难度
+* 数据库中存成日期, api提交时应该也为日期,好处是不用考虑时区的问题
+
+## Api 的保护
+主要有以下几种方式
+* `url`不加密, 服务器自动根据`ip`来限制`api`的访问次数
+* `url`加密, 添加一个不可被猜测的参数`access_token`, 让攻击者无法正确的访问`api`, `access_token`根据一种规则来生成, 这种方式的缺点就是`app`得做好防反编译的准备, 要不然攻击者反编译`app`后, 就可以知道`access_token`的生成规则了
+* 分配一个`api_key`, 根据`api_key`来限制访问次数, 这种一般用于分配`api`给第三方开发者的时候, 像开发微博，豆瓣第三方客户端时，就需要从官方平台那申请 `API_KEY`
+
+### api 访问次数限制
+`X-Rate-Limit-Limit` 一段时间内限制访问多少次
+`X-Rate-Limit-Remaining`一段时间内剩余访问次数
+`X-Rate-Limit-Reset`还剩多长时间重置`api`访问次数
+```plain
+X-Rate-Limit-Limit → 4000
+X-Rate-Limit-Remaining → 3994
+X-Rate-Limit-Reset → 3481
+```
+
+## 常用状态码
+### 请求成功
+* 200 OK : 请求执行成功并返回相应数据，如 GET 成功
+* 201 Created : 对象创建成功并返回相应资源数据，如 POST 成功；创建完成后响应头中应该携带头标 Location ，指向新建资源的地址
+* 202 Accepted : 接受请求，但无法立即完成创建行为，比如其中涉及到一个需要花费若干小时才能完成的任务。返回的实体中应该包含当前状态的信息，以及指向处理状态监视器或状态预测的指针，以便客户端能够获取最新状态。
+* 204 No Content : 请求执行成功，不返回相应资源数据，如 PATCH ， DELETE 成功, 一定要遵守规范, 不能返回数据，如果返回了, 会导致`Android Volley`出现`java.net.ProtocolException: Unexpected status line`错误
+
+### 客户端错误
+* 400 Bad Request : 请求格式不正确
+* 401 Unauthorized : 需要验证用户身份，如果服务器就算是身份验证后也不允许客户访问资源，应该响应 403 Forbidden
+* 403 Forbidden : 没有权限访问
+* 404 Not Found : 找不到目标资源
+* 422 Unprocessable Entity : 请求格式正确，但是由于含有语义错误，无法响应
+
+### 建议
+`api`如果有加密的需求, 就使用`https`, `url`可以不加密, 加密操作起来比较麻烦
+
+## 用户认证
+### 自定义 `Authorization` header
+类似这样 `Qxt dfsdflsdfasl`, `Qxt` 是认证方式的名称, `dfsdflsdfasl` 是用户口令 (token)，这样在请求 API 的过程中无需传输密码，用 `token` 来认证用户
+
+### 查询参数
+访问令牌通过API URL中的一个查询参数来发送，比如 https://example.com/users?access-token=xxxxxxxx。由于大多数 Web 服务器将记录查询参数在服务器访问日志中，不够安全，这个方法应该主要被用来服务于 JSONP 请求（无法使用 HTTP headers 来发送访问令牌 access tokens）。
+
+### OAuth 2
+OAuth2协议，API 消费者通过一个认证服务器获取访问令牌并通过 HTTP Bearer Tokens 发送给API服务器。
+`Authorization: Bearer vF9dft4qmT`
+
+## Token 何时 Revoke
+`OAuth 2`是通过一个`refresh_token`不断的获取有效的`auth_token`的, 这种方式比较麻烦
+建议`auth_token`长期有效, 建一个表, 专门存储`auth_token`, 如果这个表里面没有相应的`auth_token`就代表需要重新登录了
+
+## url对应动作
+```php
+[
+	'api/list',
+	'pattern' => 'api/<model:\w+>',
+	'verb' => 'GET'
+];
+[
+	'api/view',
+	'pattern' => 'api/<model:\w+>/<id:\d+>',
+	'verb' => 'GET'
+];
+[
+	'api/update',
+	'pattern' => 'api/<model:\w+>/<id:\d+>',
+	'verb' => 'PUT'
+];
+[
+	'api/delete',
+	'pattern' => 'api/<model:\w+>/<id:\d+>',
+	'verb' => 'DELETE'
+];
+[
+	'api/create',
+	'pattern' => 'api/<model:\w+>',
+	'verb' => 'POST'
+];
+```
+ 
+### 例子
+* GET /zoos：列出所有动物园
+* POST /zoos：新建一个动物园
+* GET /zoos/ID：获取某个指定动物园的信息
+* PUT /zoos/ID：更新某个指定动物园的信息（提供该动物园的全部信息）
+* PATCH /zoos/ID：更新某个指定动物园的信息（提供该动物园的部分信息）
+* DELETE /zoos/ID：删除某个动物园
+* GET /zoos/ID/animals：列出某个指定动物园的所有动物
+* DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物
+
+## 案例修正
+### 用户API : USERS
+修改前我们的api是这样的：
+```plain
+/api/v1/user/:user_id GET 获取用户信息
+/api/v1/auth/register POST 用户注册
+/api/v1/auth/login POST 用户登录
+/api/v1/auth/confirmpw POST 确认密码
+/api/v1/auth/changepw POST 修改密码
+```
+这里面的问题有:
+
+资源没有使用复数形式，如user
+:user_id和users冗余，使用:id即可
+存在动词如register,login等
+confirmpw和changepw冗余,应该在改变密码的时候对密码进行确认。
+由于本项目的用户数据从后台导入，因此删除register功能，另外因为此项目为隐私项目进行授权后所有的请求需要附带token这里省略access_token参数。这里省略/api/v1的前缀:
+
+/auth/local GET 验证用户名密码，并重新生成token，返回基本的用户信息
+/users/changePassword POST 重置用户密码，重新生成盐值和hash存储到数据库中，返回修改后的用户基本信息(这个暂时不知道怎么改,是使用users UPDATE方法，或者将改变密码变成一个名词的服务)
+/users/details GET 获取用户详细信息,如最近的主题以及最近的回复
+
+### 帖子API : POSTS
+```plain
+/api/v1/recent GET 获取最近帖子
+/api/v1/posts?limit=xx&page=xx GET 获取帖子列表
+/api/v1/post/:post_id GET 获取某个帖子内容
+/api/v1/post POST 新建一个帖子
+/api/v1/post/:post_id/likes POST 为某个帖子点赞
+/api/v1/post/:id PUT 更新某个帖子
+/api/v1/post/:id DELETE 删除某个帖子
+```
+诊断
+
+资源没有使用复数形式
+post_id冗余
+recent的api和获取帖子列表冗余，设置limit为某值,page为1即可获得最近的帖子
+点赞功能并不在需求里，这里删除掉
+
+修改后
+
+/posts?limit=xx&page=xx GET 获取帖子列表
+/posts/:id GET 获取某个帖子的具体内容
+/posts POST 创建帖子，返回帖子基本内容。
+/posts/:id DELETE 删除帖子，返回空文档。
+回复API ： REPLYS
+
+### 回复API
+```plain
+/api/v1/reply POST 创建一个回复
+/api/v1/reply/:reply_id DELETE 删除某个回复
+```
+诊断
+
+资源没有使用复数形式
+reply_id冗余
+
+修改后
+
+replys POST 创建一个回复，返回该回复的信息
+replys/:id DELETE 删除某个回复,返回空文档
+
+## RESTful API 示例
+- [PayPal](https://developer.paypal.com/docs/api/)
+- [GitHub](https://developer.github.com/v3/)
+- [coinbase](https://developers.coinbase.com/api/v2)
+- [WordPress](https://developer.wordpress.com/docs/api/)
+
+## 参考资料
+* [HTTP API Design](https://geemus.gitbooks.io/http-api-design/content/en/)
+* [JSON API 设计规范](http://jsonapi.org/)
+* [前后端接口规范 关键点](https://github.com/ecomfe/ub-ria/wiki/%E5%89%8D%E5%90%8E%E7%AB%AF%E6%8E%A5%E5%8F%A3%E8%A7%84%E8%8C%83-%E5%85%B3%E9%94%AE%E7%82%B9)
+* [阮一峰RESTful api 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
+* [理解 RESTful api](http://www.ruanyifeng.com/blog/2011/09/restful.html)
+* [HTTP API 指北](https://github.com/bolasblack/http-api-guide)
+* [PUT和PATCH区别](https://ihower.tw/blog/archives/6483)
+* [HTTP API 设计指南](https://github.com/ZhangBohan/http-api-design-ZH_CN)
+* [php 代码实现](http://blank.jingwentian.com/share/133b0c95dd1c5dafa4c564f459713efc)
+* [app后端API开发总结](http://beginman.cn/%E6%9C%AA%E5%88%86%E7%B1%BB/2015/06/25/app-API/)
+* [RESTful api 设计最佳规范 英文版](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
+* [RESTful api 设计最佳规范 中文版](http://www.oschina.net/translate/best-practices-for-a-pragmatic-restful-api)
+* [白宫 API 设计标准](https://github.com/WhiteHouse/api-standards)
+* [微软 API 设计指南](https://github.com/Microsoft/api-guidelines)
+* [Restful API浅析 之设计原则与案例修正](http://mclspace.com/2015/11/03/restful-note/)
+* [JWT](https://jwt.io/)
