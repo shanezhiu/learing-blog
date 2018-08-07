@@ -24,8 +24,9 @@ When I am learning alone, I consider that  doing some notes could be good for ac
     + [ ] docker,vagrant,gitlab,CI/CD
     + [ ] git,git flow, subversion
 
-## :heavy_check_mark: 七月 TODO 列表
+## :heavy_check_mark: 八月 TODO 列表
 
 - [ ] :fire: C语言 基础
+- [ ] :fire: docker了解
 - [ ] Yii框架guide
 - [ ] 使用docker搭建lnmp/lamp环境
