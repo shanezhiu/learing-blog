@@ -20,7 +20,12 @@
  C was adopted as a system development language because it produces code that runs nearly as fast as the code written in assembly language. Some examples of the use of C might be -
 
  + OS
- + COmpilers
+ + Compilers
  + Assemblers
  + Text Editors
  + Databases
+
+ ## 我为什么学C
+ + 现行的很多语言基本都借鉴了C
+ + C是系统编程必备因素
+ + 很多成功的软件的都是以C实现
