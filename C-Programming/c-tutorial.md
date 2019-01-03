@@ -49,3 +49,18 @@ Details for explaining above example:
 
 #### Note
 make sure that the compiler command is in your path and run it in the source file directory.
+
+
+### C - Basic Syntax
+
+#### Tokens In C
+
+#### Semicolons
+
+#### Comments
+
+#### Identifiers
+
+#### Keywords
+
+#### Whitespace in C
