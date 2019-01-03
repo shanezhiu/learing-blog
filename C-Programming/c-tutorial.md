@@ -54,13 +54,51 @@ make sure that the compiler command is in your path and run it in the source fil
 ### C - Basic Syntax
 
 #### Tokens In C
++ keywords
++ identifier
++ constant
++ string literal
 
 #### Semicolons
 
+The semicolon is a statement terminator in C program.
+It indicates the end of one logical entity.
+
 #### Comments
+Comments are like helping text in your C program and they are **ignored by the compiler**. They start with /* and terminate with the characters */ as shown below.
 
 #### Identifiers
 
++ A C identifier is a name used to identify a variable, function, or any other user-defined item. 
++ An identifier starts with a letter A to Z, a to z, or an underscore '_' followed by zero or more letters, underscores, and digits (0 to 9).
++ C is a case-sensitive programming language.
++ C does not allow punctuation characters such as @, $, and % within identifiers.
+
 #### Keywords
 
+The following list shows the reserved words in C.
+```
+auto	else	long	switch
+break	enum	register	typedef
+case	extern	return	union
+char	float	short	unsigned
+const	for	signed	void
+continue	goto	sizeof	volatile
+default	if	static	while
+do	int	struct	_Packed
+double	
+```
+
 #### Whitespace in C
+
++ A line containing only whitespace, possibly with a comment, is known as a blank line, and a C compiler totally ignores it.
++ Whitespace is the term used in C to describe blanks, tabs, newline characters and comments.
++ Whitespace separates one part of a statement from another and enables the compiler to identify where one element in a statement, such as int, ends and the next element begins.
+
+    ```int age ```
++ there must be at least one whitespace character (usually a space) between int and age for the compiler to be able to distinguish them. 
+
+    ```fruit = apples + oranges;   // get the total fruit```
++ no whitespace characters are necessary between fruit and =, or between = and apples, although you are free to include some if you wish to increase readability.
+
+#### C - Data Types
