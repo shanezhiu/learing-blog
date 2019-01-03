@@ -46,3 +46,6 @@ Details for explaining above example:
 + Now, type a.out to execute your program.
 
 + You will see the output "Hello World" printed on the screen.
+
+#### Note
+make sure that the compiler command is in your path and run it in the source file directory.
