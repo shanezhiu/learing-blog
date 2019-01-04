@@ -212,3 +212,35 @@ The void type specifies that no value is available. It is used in three kinds of
 3. **Pointers to void**
 
 > A pointer of type void * represents the address of an object, but not its type. For example, a memory allocation(分配) function void *malloc( size_t size ); returns a pointer to void which can be casted(计算) to any data type.
+
+### C - Variables
+
+A variable is nothing but a name given to a storage area that our programs can manipulate(操作). 
+Each variable in C has a specific type, which determines the size and layout of the variable's memory; 
+the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.
+
+The name of a variable can be composed of letters, digits, and the underscore character. 
+It must begin with either a letter or an underscore. Upper and lowercase letters are distinct because C is case-sensitive. Based on the basic types explained in the previous chapter, there will be the following basic variable types −
+
+1. **char**
+
+> Typically a single octet(one byte). This is an integer type.
+
+2. **int**
+
+> The most natural size of integer for the machine.
+
+3. **float**
+
+> A single-precision floating point value.
+
+4. **double**
+
+> A double-precision floating point value.
+
+5. **void**
+
+> Represents the absence(无) of type.
+
+C programming language also allows to define various other types of variables, which we will cover in subsequent chapters like Enumeration, Pointer, Array, Structure, Union, etc. 
+For this chapter, let us study only basic variable types.
