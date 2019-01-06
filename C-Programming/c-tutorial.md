@@ -376,4 +376,9 @@ Constants can be of any of the basic data types like an integer constant, a floa
 
 Constants are treated just like regular variables except that their values cannot be modified after their definition.
 
+#### Integer Literals
+An integer literal can be a decimal, octal, or hexadecimal constant. A prefix specifies the base or radix: 0x or 0X for hexadecimal, 0 for octal, and nothing for decimal.
 
+An integer literal can also have a suffix that is a combination of U and L, for unsigned and long, respectively. The suffix can be uppercase or lowercase and can be in any order.
+
+Here are some examples of integer literals −
