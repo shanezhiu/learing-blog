@@ -557,3 +557,13 @@ When the above code is compiled and executed, it produces the following result â
 ```value of area : 50```
 
 Note that it is a good programming practice to define constants in `CAPITALS`.
+
+
+### C - Storage Classes
+
+A storage class defines the scope (visibility) and life-time of variables and/or functions within a C Program. They precede the type that they modify. We have four different storage classes in a C program âˆ’
+
++ auto
++ register
++ static
++ extern
