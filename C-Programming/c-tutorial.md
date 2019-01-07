@@ -679,3 +679,15 @@ Here, extern is being used to declare count in the second file, where as it has 
 It will produce the executable program a.out. When this program is executed, it produces the following result −
 
 `count is 5`
+
+- [ ] C - Operators
+
+- [ ] C - Decision Making
+
+- [ ] C - Loops
+
+- [ ] C - Functions
+
+- [ ] C - Scope Rules
+
+- [ ] C - Arrays
