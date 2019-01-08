@@ -22,11 +22,11 @@ A C program basically consists of following parts:
 + Comments
 
 Details for explaining above example:
-+ The first line of the program #include <stdio.h> is a preprocessor command, which tells a C compiler to include stdio.h file before going to actual compilation.
++ The first line of the program `#include <stdio.h>` is a preprocessor command, which tells a C compiler to include stdio.h file before going to actual compilation.
 
 + The next line int main() is the main function where the program execution begins.
 
-+ The next line /*...*/ will be ignored by the compiler and it has been put to add additional comments in the program. So such lines are called comments in the program.
++ The next line `/*...*/` will be ignored by the compiler and it has been put to add additional comments in the program. So such lines are called comments in the program.
 
 + The next line printf(...) is another function available in C which causes the message "Hello, World!" to be displayed on the screen.
 
@@ -35,7 +35,7 @@ Details for explaining above example:
 #### Compile and Execute C Program
 + Open a text editor and add the above-mentioned code.
 
-+ Save the file as hello.c
++ Save the file as `hello.c`
 
 + Open a command prompt and go to the directory where you have saved the file.
 
