@@ -558,6 +558,11 @@ When the above code is compiled and executed, it produces the following result â
 
 Note that it is a good programming practice to define constants in `CAPITALS`.
 
+#### what'is the difference bettwen `const` and `#define`
+
+1. `#define` is pre-processor directive while `const` is a keyword
+2.  `#define` is not scope controlled whereas `const` is scope controlled
+
 
 ### C - Storage Classes
 
@@ -679,6 +684,8 @@ Here, extern is being used to declare count in the second file, where as it has 
 It will produce the executable program a.out. When this program is executed, it produces the following result âˆ’
 
 `count is 5`
+
+
 
 - [ ] C - Operators
 
