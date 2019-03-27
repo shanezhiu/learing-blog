@@ -10,7 +10,10 @@
 
 - [ ] C
 - [ ] Python
+- [ ] data structure
 
 ### April goal
 - shotener URL
 - mobile number attribution in china
+
+
