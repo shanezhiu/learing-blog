@@ -10,3 +10,7 @@
 
 - [ ] C
 - [ ] Python
+
+### April goal
+- shotener URL
+- mobile number attribution in china
