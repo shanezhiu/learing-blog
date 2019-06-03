@@ -1,3 +1,6 @@
 [submodule "noapes.io"]
   path = noapes.io
   url = https://github.com/shanezhiu/noapes.io
+[submodule "developer-roadmap"]
+	path = developer-roadmap
+	url = https://github.com/kamranahmedse/developer-roadmap.git
