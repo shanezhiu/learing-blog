@@ -1,6 +1,6 @@
-[submodule "noapes.io"]
-  path = noapes.io
-  url = https://github.com/shanezhiu/noapes.io
-[submodule "developer-roadmap"]
-	path = developer-roadmap
+[submodule "Tools/developer-roadmap"]
+	path = Tools/developer-roadmap
 	url = https://github.com/kamranahmedse/developer-roadmap.git
+[submodule "Tools/noapes.io"]
+	path = Tools/noapes.io
+	url = https://github.com/shanezhiu/noapes.io
