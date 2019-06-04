@@ -4,3 +4,6 @@
 [submodule "Tools/noapes.io"]
 	path = Tools/noapes.io
 	url = https://github.com/shanezhiu/noapes.io
+[submodule "Tools/awesome.git"]
+	path = Tools/awesome.git
+	url = https://github.com/sindresorhus/awesome.git
