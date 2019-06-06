@@ -6,6 +6,8 @@
 - [ ] Data Structures and Algorithem Analysis in C
 - [ ] codeception documents
 - [ ] Yii2 framework
+- [ ] Python document and write first crawler 
+
+**the end of August**
 - [ ] Vuejs
 - [ ] complete luling365 first PC beta
-- [ ] Python document and write first crawler 
