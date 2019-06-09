@@ -10,3 +10,6 @@
 [submodule "Tools/docker-examples"]
 	path = Tools/docker-examples
 	url = https://github.com/noapes/docker-examples.git
+[submodule "Tools/noapes-vimrc"]
+	path = Tools/noapes-vimrc
+	url = git@github.com:shanezhiu/noapes-vimrc.git
