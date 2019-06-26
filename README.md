@@ -11,3 +11,4 @@
 **the end of August**
 - [ ] Vuejs
 - [ ] complete luling365 first PC beta
+- [ ] complete a url shortener 
