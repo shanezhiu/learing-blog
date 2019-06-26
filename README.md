@@ -6,7 +6,8 @@
 - [ ] Data Structures and Algorithem Analysis in C
 - [ ] codeception documents
 - [ ] Yii2 framework
-- [ ] Python document and write first crawler 
+- [ ] Python document and write first crawler
+- [ ] Vuejs framework 
 
 **the end of August**
 - [ ] Vuejs
