@@ -7,3 +7,6 @@
 [submodule "Tools/docker-examples"]
 	path = Tools/docker-examples
 	url = https://github.com/noapes/docker-examples.git
+[submodule "Tools/noapes.io"]
+	path = Tools/noapes.io
+	url = https://github.com/shanezhiu/noapes.io.git
