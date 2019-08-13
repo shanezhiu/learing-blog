@@ -10,3 +10,6 @@
 [submodule "Tools/noapes.io"]
 	path = Tools/noapes.io
 	url = https://github.com/shanezhiu/noapes.io.git
+[submodule "Tools/pelican"]
+	path = Tools/pelican
+	url = https://github.com/getpelican/pelican.git
