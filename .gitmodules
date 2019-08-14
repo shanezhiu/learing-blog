@@ -13,3 +13,6 @@
 [submodule "Tools/pelican"]
 	path = Tools/pelican
 	url = https://github.com/getpelican/pelican.git
+[submodule "Tools/coding-interview-university"]
+	path = Tools/coding-interview-university
+	url = https://github.com/jwasham/coding-interview-university.git
