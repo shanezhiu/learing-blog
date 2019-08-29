@@ -13,3 +13,10 @@
 - [ ] Vuejs
 - [ ] complete luling365 first PC beta
 - [ ] complete a url shortener 
+
+
+**Recently Do**
+
+- [ ] luling365
+- [ ] shortened url service
+- [ ] a wechat micro app
