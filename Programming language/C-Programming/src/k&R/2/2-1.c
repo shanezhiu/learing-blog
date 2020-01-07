@@ -9,6 +9,9 @@ int compute_char(void);
 
 int main(void)
 {
+  printf("bit pattern:%d\n", '\013');
+  printf("character 0 is: %d\n", '0');
+  printf("escape charater:%d\n", '\0');
   printf("char: %d\n", sizeof(char));
   printf("short: %d\n", sizeof(short));
   printf("int: %d\n", sizeof(int));
